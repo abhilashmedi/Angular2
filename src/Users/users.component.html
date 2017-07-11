@@ -1,0 +1,211 @@
+<!--<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=UTF-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular2</title>
+	<base href="/">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+
+	<script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+	<script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
+
+	<script src="https://apis.google.com/js/platform.js"></script>
+</head>
+
+<style>
+	body {
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+
+	.box {
+		padding: 20px;
+		padding-left: 200px;
+		/*border: 1px solid green;*/
+		/*display: table-cell;
+		vertical-align: middle;*/
+	}
+
+	.card {
+		border: 2px solid wheat;
+		width: 230px;
+		height: 300px;
+		margin-left: -120px;
+		float: left;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		background-color: lightslategray;
+	}
+
+	.overFirst {
+		z-index: var(--selected);
+	}
+
+	.overSecond {
+		z-index: 19;
+	}
+
+	.overThird {
+		z-index: 18;
+	}
+
+	.overFourth {
+		z-index: 17;
+	}
+
+	.selected {
+		z-index: 5;
+		height: 400px;
+		background-color: red;
+	}
+
+	.notSelected {
+		margin-top: 150px;
+		/*z-index: var(--selected);*/
+		/*opacity: 0.5;*/
+	}
+</style>
+
+<body>
+
+	<!--[ngStyle]="[selected===1?{}:{'z-index': selected-1}]"-->
+
+<!--<div class="box">
+	<div class="card overFirst" [style.z-index]="getStyle(1,selected)" [style.background-color]="getColor(1,selected)" [ngClass]="selected===1?'selected':'notSelected'"
+	 (click)="clicked(1)"></div>
+	<div class="card overSecond" [style.z-index]="getStyle(2,selected)" [style.background-color]="getColor(2,selected)" [ngClass]="selected===2?'selected':'notSelected'"
+	 (click)="clicked(2)"></div>
+	<div class="card overThird" [style.z-index]="getStyle(3,selected)" [style.background-color]="getColor(3,selected)" [ngClass]="selected===3?'selected':'notSelected'"
+	 (click)="clicked(3)"></div>
+	<div class="card overFourth" [style.z-index]="getStyle(4,selected)" [style.background-color]="getColor(4,selected)" [ngClass]="selected===4?'selected':'notSelected'"
+	 (click)="clicked(4)"></div>
+	<div style="clear:both;"></div>
+</div>-->
+
+<!--<div class="box">
+		<div class="card overFirst" [ngStyle]="[selected===1?{'z-index': 5, 'background-color':'red'}:{'z-index': selected }]" (click)="clicked(1)"></div>
+		<div class="card overSecond" [ngStyle]="[selected===2?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(2)"></div>
+		<div class="card overThird" [ngStyle]="[selected===3?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(3)"></div>
+		<div class="card overFourth" [ngStyle]="[selected===4?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(4)"></div>
+		<div style="clear:both;"></div>
+	</div>-->
+<!--</body>
+
+</html>-->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset=UTF-8>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Angular2</title>
+	<base href="/">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+		crossorigin="anonymous">
+
+	<script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+	<script src="https://unpkg.com/reflect-metadata@0.1.3"></script>
+
+	<script src="https://apis.google.com/js/platform.js"></script>
+</head>
+
+<style>
+	body {
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.box {
+		padding: 20px;
+		padding-left: 200px;
+		margin-left: 500px;
+		/*border: 1px solid green;*/
+		/*display: table-cell;
+		vertical-align: middle;*/
+	}
+	
+	.card {
+		border: 2px solid wheat;
+		width: 230px;
+		height: 300px;
+		margin-left: -120px;
+		float: left;
+		box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+		background-color: lightslategray;
+	}
+	
+	.overFirst {
+		z-index: var(--selected);
+	}
+	
+	.overSecond {
+		z-index: 19;
+	}
+	
+	.overThird {
+		z-index: 18;
+	}
+	
+	.overFourth {
+		z-index: 17;
+	}
+	
+	.selected {
+		z-index: 5;
+		height: 400px;
+		background-color: red;
+	}
+	
+	.notSelected {
+		margin-top: 150px;
+		/*z-index: var(--selected);*/
+		/*opacity: 0.5;*/
+	}
+</style>
+
+<body>
+
+	<!--[ngStyle]="[selected===1?{}:{'z-index': selected-1}]"-->
+
+	<div class="box">
+		<div class="card overFirst" [style.z-index]="getStyle(1,selected)" [style.background-color]="getColor(1,selected)" [ngClass]="selected===1?'selected':'notSelected'"
+			(click)="clicked(1)"></div>
+		<div class="card overSecond" [style.z-index]="getStyle(2,selected)" [style.background-color]="getColor(2,selected)" [ngClass]="selected===2?'selected':'notSelected'"
+			(click)="clicked(2)"></div>
+		<div class="card overThird" [style.z-index]="getStyle(3,selected)" [style.background-color]="getColor(3,selected)" [ngClass]="selected===3?'selected':'notSelected'"
+			(click)="clicked(3)"></div>
+		<div class="card overFourth" [style.z-index]="getStyle(4,selected)" [style.background-color]="getColor(4,selected)" [ngClass]="selected===4?'selected':'notSelected'"
+			(click)="clicked(4)"></div>
+		<div style="clear:both;"></div>
+	</div>
+
+	<!--<div class="box">
+		<div class="card overFirst" [ngStyle]="[selected===1?{'z-index': 5, 'background-color':'red'}:{'z-index': selected }]" (click)="clicked(1)"></div>
+		<div class="card overSecond" [ngStyle]="[selected===2?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(2)"></div>
+		<div class="card overThird" [ngStyle]="[selected===3?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(3)"></div>
+		<div class="card overFourth" [ngStyle]="[selected===4?{'z-index': 5, 'background-color':'red'}:{'z-index': 2}]" (click)="clicked(4)"></div>
+		<div style="clear:both;"></div>
+	</div>-->
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+{
+    "people": [
+        {
+            "age": 10,
+            "name": "Person A",
+            "emailAddress": "AbhilashMedi147@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 16,
+            "name": "Person G",
+            "emailAddress": "AbhilashMedi1472@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 12,
+            "name": "Person C",
+            "emailAddress": "AbhilashMedi1473@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 13,
+            "name": "Person D",
+            "emailAddress": "AbhilashMedi1474@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 14,
+            "name": "Person E",
+            "emailAddress": "AbhilashMedi1475@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 15,
+            "name": "Person F",
+            "emailAddress": "AbhilashMedi1476@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 17,
+            "name": "Person H",
+            "emailAddress": "AbhilashMedi1477@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 18,
+            "name": "Person I",
+            "emailAddress": "AbhilashMedi1478@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 19,
+            "name": "Person J",
+            "emailAddress": "AbhilashMedi1479@gmail.com",
+            "password": "asd"
+        },
+        {
+            "age": 20,
+            "name": "Person K",
+            "emailAddress": "AbhilashMedi14710@gmail.com",
+            "password": "asd"
+        }
+    ]
+}

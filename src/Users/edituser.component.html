@@ -1,0 +1,33 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/createuserstyle.css">
+</head>
+<div class="container">
+	<form [formGroup]="editUserForm" class="form-inline" (ngSubmit)="edit(editUserForm)" id="contact" style="background:snow; border: 1px solid darkgray">
+		<fieldset>
+			<input placeholder="First Name" value="{{name.split(' ', 2)[0]}}" type="text" tabindex="1" required autofocus formControlName="firstNames"
+			 [ngModel]>
+			<div *ngIf="noFirstName" [ngClass]="'invalidClass'">No first name</div>
+		</fieldset>
+		<fieldset>
+			<input placeholder="Last Name" value="{{name.split(' ', 2)[1]}}" type="text" tabindex="2" required formControlName="lastNames"
+			 [ngModel]>
+			<div *ngIf="noLastName" [ngClass]="'invalidClass'">No last name</div>
+		</fieldset>
+		<fieldset>
+			<input placeholder="Email Address" type="tel" tabindex="3" disabled style="background-color:gainsboro" formControlName="emails"
+			 [ngModel]>
+		</fieldset>
+		<fieldset>
+			<input type="number" placeholder="Age" type="url" tabindex="4" required formControlName="ages" [ngModel]>
+			<div *ngIf="noAge" [ngClass]="'invalidClass'">No age</div>
+		</fieldset>
+		<fieldset>
+			<button name="submit" type="submit" *ngIf="editUserForm.valid" data-dismiss='modal'>Valid</button>
+			<button name="submit" type="submit" *ngIf="!editUserForm.valid" data-dismiss='modal'>Not valid</button>
+		</fieldset>
+	</form>
+</div>
+
+
+
+<!--value={{firstName}} value={{email}} value={{age}} value={{lastName}}-->

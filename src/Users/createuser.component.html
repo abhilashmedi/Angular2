@@ -1,0 +1,32 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/createuserstyle.css">
+</head>
+<div class="container">
+	<form [formGroup]="createUserForm" class="form-inline" (ngSubmit)="create()" id="contact" style="background:snow; border: 1px solid darkgray">
+		<fieldset>
+			<input placeholder="First Name" type="text" tabindex="1" required autofocus formControlName="firstName" ngModel>
+		</fieldset>
+		<div *ngIf="noFirstName" [ngClass]="'invalidClass'">No First Name</div>
+		<div *ngIf="firstNameLength" [ngClass]="'invalidClass'">First Name must be atleast 3 digits</div>
+		<fieldset>
+			<input placeholder="Last Name" type="email" tabindex="2" required formControlName="lastName" ngModel>
+		</fieldset>
+		<div *ngIf="noLastName" [ngClass]="'invalidClass'">No Last Name</div>
+		<div *ngIf="lastNameLength" [ngClass]="'invalidClass'">Last Name must be atleast 3 digits</div>
+		<fieldset>
+			<input placeholder="Email Address" type="tel" tabindex="3" required formControlName="email" ngModel>
+		</fieldset>
+		<div *ngIf="noEmail" [ngClass]="'invalidClass'">Email not entered</div>
+		<div *ngIf="emailValidation" [ngClass]="'invalidClass'">Email not valid</div>
+		<fieldset>
+			<input type="number" placeholder="Age" type="url" tabindex="4" required formControlName="age" ngModel>
+		</fieldset>
+		<div *ngIf="noAge" [ngClass]="'invalidClass'">No Age</div>
+		<div *ngIf="invalidAge" [ngClass]="'invalidClass'">Age must be greater than zero</div>
+		<fieldset>
+			<button name="submit" type="submit" id="contact-submit" >Submit</button>
+		</fieldset>
+	</form>
+</div>
+
+
