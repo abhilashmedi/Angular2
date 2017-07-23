@@ -7,4 +7,3 @@ conflict
 npm run concurrently
 
 
-commit from STS
