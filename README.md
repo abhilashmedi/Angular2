@@ -5,3 +5,6 @@ npm run dev
 conflict
 
 npm run concurrently
+
+
+commit from STS
